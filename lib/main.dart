@@ -46,7 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              Provider<String>.value(
+                value: 'Hello World',
+                child: MaterialApp(
+                  home: Home(),
+                )
+              ),
             ),
             Text(
               '$_counter',
